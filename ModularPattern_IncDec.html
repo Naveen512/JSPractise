@@ -1,0 +1,42 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="js.js"></script>
+	<script src="Selectorjs.js"></script>
+	<script>
+    var myFunction=(function(){
+          var num=0;
+
+           return {
+            increment: function() {
+              
+               document.getElementById("numText").value=++num;
+                
+            },
+            decrement:function(){
+            	document.getElementById("numText").value=--num;
+            	return --num;
+            }
+
+      }
+         
+      })();
+      function addfunction () {
+      	alert("add");
+      	 myFunction.increment();
+
+      }
+      function subfunction(){
+      	alert("sub");
+      	myFunction.decrement();
+      }
+	</script>
+</head>
+<body>
+       <input type="text" id="numText" value="0" />
+       <button id="add" onclick="addfunction()">Add button</button>
+       <button id="sub" onclick="subfunction()">sub button</button>
+
+</body>
+</html>

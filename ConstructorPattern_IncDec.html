@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+
+     function TotalValue(){
+     	// alert("1+++");
+     	var num=0;
+     	this.increment=function(){
+     		// alert("2+++");
+     		return ++num;
+     	};
+     	this.decrement=function(){
+     		// alert("3+++");
+     	       return --num;
+     	};
+     }
+     var getVal=new TotalValue();
+     function addfunction(){
+     	// alert(getVal.increment());
+        document.getElementById("textbox").value=getVal.increment();
+     	
+     }
+     function subfunction(){
+     	document.getElementById("textbox").value=getVal.decrement();
+     	
+     }
+	
+
+
+</script>
+</head>
+<body>
+ <input type="text" id="textbox" value="0">
+ <button id="add" onclick="addfunction()">add button</button>
+ <button id="sub" onclick="subfunction()">sub button</button>
+</body>
+</html>
